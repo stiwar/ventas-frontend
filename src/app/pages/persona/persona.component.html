@@ -1,0 +1,21 @@
+<mat-toolbar>Personas</mat-toolbar>
+
+<mat-table [dataSource]="dataSource" matSort>
+  <ng-container matColumnDef="idPersona">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.idPersona}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="nombres">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Nombres </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.nombres}}</mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="apellidos">
+    <mat-header-cell *matHeaderCellDef mat-sort-header> Apellidos </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.apellidos}} </mat-cell>
+  </ng-container>
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+</mat-table>
