@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatButtonModule, MatToolbarModule, MatTableModule, MatPaginatorModule, MatIconModule, MatFormFieldModule, MatInputModule, MatSortModule, MatPaginatorIntl, MatCardModule, MatSnackBarModule } from '@angular/material';
+import { MatButtonModule, MatToolbarModule, MatTableModule, MatPaginatorModule, MatIconModule, MatFormFieldModule, MatInputModule, MatSortModule, MatPaginatorIntl, MatCardModule, MatSnackBarModule, MatMenuModule, MatSidenavModule, MatDividerModule } from '@angular/material';
 import { MatPaginatorImpl } from '../_shared/mat-paginator';
 
 @NgModule({
@@ -16,7 +16,10 @@ import { MatPaginatorImpl } from '../_shared/mat-paginator';
     MatInputModule,
     MatSortModule,
     MatCardModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatDividerModule
   ],
   exports: [
     MatToolbarModule,
@@ -28,7 +31,10 @@ import { MatPaginatorImpl } from '../_shared/mat-paginator';
     MatInputModule,
     MatSortModule,
     MatCardModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatDividerModule
   ],
   providers: [
     {provide: MatPaginatorIntl, useClass: MatPaginatorImpl}
