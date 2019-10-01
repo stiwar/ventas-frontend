@@ -20,7 +20,7 @@ export class PersonaComponent implements OnInit {
 
   ngOnInit() {
 
-    this.personaService.personaCambio.subscribe(data => {//variable reactiva, aquí entra cuando se crea o actualiza un registro de persona
+    this.personaService.personaCambio.subscribe(data => {//variable reactiva, aquí entra cuando se crea, actualiza o elimina un registro de persona
       this.dataSource = new MatTableDataSource(data);
       this.dataSource.sort = this.sort;
       this.dataSource.paginator = this.paginator;

@@ -11,6 +11,7 @@ export class ProductoService {
 
   url: string = `${environment.HOST_SERVER}/productos`;
   productoCambio = new Subject<Producto[]>();
+  mensajeCambio = new Subject<string>();
 
   constructor(private http: HttpClient) { }
 
@@ -22,15 +23,15 @@ export class ProductoService {
     return this.http.get<Producto>(`${this.url}/${idPaciente}`);
   }
 
-  registrar(persona: Producto): Observable<Producto> {
-    return this.http.post<Producto>(`${this.url}`, persona);
+  registrar(producto: Producto): Observable<Producto> {
+    return this.http.post<Producto>(`${this.url}`, producto);
   }
 
-  modificar(persona: Producto): Observable<Producto> {
-    return this.http.put<Producto>(`${this.url}`, persona);
+  modificar(producto: Producto): Observable<Producto> {
+    return this.http.put<Producto>(`${this.url}`, producto);
   }
 
-  eliminar(idPaciente: number): Observable<Producto> {
-    return this.http.delete<Producto>(`${this.url}/${idPaciente}`);
+  eliminar(idProducto: number): Observable<Producto> {
+    return this.http.delete<Producto>(`${this.url}/${idProducto}`);
   }
 }
